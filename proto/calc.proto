@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package calc;
+
+message ComputeRequest{
+    int32 number = 1;
+}
+
+message ComputeResponse{
+    string result = 1;
+}
+
+service calcService{
+    rpc SquareRoot (ComputeRequest) returns (ComputeResponse);
+}
