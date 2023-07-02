@@ -10,6 +10,6 @@ message ComputeResponse{
     string result = 1;
 }
 
-service calcService{
+service calc{
     rpc SquareRoot (ComputeRequest) returns (ComputeResponse);
 }
