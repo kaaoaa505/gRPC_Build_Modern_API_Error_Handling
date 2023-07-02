@@ -9,10 +9,15 @@ function squareRoot(call, callback) {
   if(number >= 0){
     var result = Math.sqrt(number);
 
+    console.log('✅ result    ', result)
+    
     var response = new calc_pb.ComputeResponse();
     response.setResult(result);
-    
-    callback(null, response);
+
+    setTimeout(() => {
+console.log('just for deadline test');
+    }, 5000);
+    // return callback(null, response);
   }else{
     // Error Handling
     return callback({
